@@ -8,7 +8,6 @@
 <body>
 </body>
 <script>
-  
   var style = new PIXI.TextStyle({
   fontFamily: 'Arial',
   fontSize: 10,
@@ -23,34 +22,34 @@
   dropShadowAngle: Math.PI / 6,
   dropShadowDistance: 6,
   wordWrap: true,
+  opacity: 1,
   wordWrapWidth: 440
   });
-
-    //app.stage.addChild(richText);
-  var app = new PIXI.Application(1000 , 1000, {backgroundColor: 0x1099bb});
+  var app = new PIXI.Application(750 , 500, {backgroundColor: 0x1099bb});
   document.body.appendChild(app.view);
+  let point = 0;
+  var User = new PIXI.Text("User : " + point);
+  User.x = 650;
+  User.y = 10;
+  app.stage.addChild(User);
   var socket = io.connect('/'),
       i      = 0;
-  socket.on('tweet', function (data) {
-//    td.innerHTML = td.innerHTML + data;
+      function onclick() {
+            this.visible = false;
+            User.setText("User : " + ++point)
+            console.log(point)
+        }
+  socket.on('tweet', function (data,point) {
   var richText = new PIXI.Text(data , style);
   richText.x = 10;
   richText.y = 10 + (i * 70);
   i++;
-
   richText.interactive = true
-
   richText.buttonMode = true
-
-  richText.on('pointerdown', onClick)
-
+  richText.on('pointerdown',onclick)
   app.stage.addChild(richText);
-  
   });
-  function onClick () {
-  richText.scale.x *= 1.25;
-  richText.scale.y *= 1.25;
-  }
-  
+
+
 </script>
 </html>
