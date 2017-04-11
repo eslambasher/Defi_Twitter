@@ -37,7 +37,6 @@
       function onclick() {
             this.visible = false;
             User.setText("User : " + ++point)
-            console.log(point)
         }
   socket.on('tweet', function (data,point) {
   var richText = new PIXI.Text(data , style);
