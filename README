@@ -1,8 +1,10 @@
 sur le terminal, vous lancez cette commande:
 
-node/nodejs get_tweet.js
+node/nodejs get_tweets.js
 
 Puis sur votre navigateur :
 
 Localhost:3000
+
+Pour changer le mot, il faut aller dans le fichier get_tweets.js et vous changez dans la fonction stream le value de track.
 
