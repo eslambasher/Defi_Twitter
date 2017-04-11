@@ -6,5 +6,5 @@ Puis sur votre navigateur :
 
 Localhost:3000
 
-Pour changer le mot, il faut aller dans le fichier get_tweets.js et vous changez dans la fonction stream le value de track.
+Pour changer le Hashtag, il faut aller dans le fichier get_tweets.js et vous changez dans la fonction stream le value de track.
 
