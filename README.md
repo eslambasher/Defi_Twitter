@@ -6,13 +6,20 @@ Defi Twitter
 
 1 - Install npm and nodejs/node packages.
 
-Commendes : sudo apt-get isntall npm nodejs.
+Commendes :  
+
+- sudo apt-get isntall npm nodejs.
+
+- npm i -S socket.io twitter
 
 ## ⚙ Configuration
 
-if you want change the HashTag :
+1 - Enter your keys and access token twitter in get_tweets.js 
+- if you don't have the keys twitter you can create your application here "https://dev.twitter.com/"
 
-1 - Go to the file get_tweets.js and in the function stream change the value for track. 
+2 - if you want change the HashTag :
+
+- Go to the file get_tweets.js and in the function stream change the value for track. 
 
 ## 👋 Usage
 
