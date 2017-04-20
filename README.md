@@ -5,17 +5,21 @@ Defi Twitter
 ## 🌍 Installation
 
 1 - Install npm and nodejs/node packages.
+
 Commendes : sudo apt-get isntall npm nodejs.
 
 ## ⚙ Configuration
 
 if you want change the HashTag :
+
 1 - Go to the file get_twitter.js and in the function stream change the value for track. 
 
 ## 👋 Usage
 
 Run this commande : 
+
 nodejs/node get_twitter.js
+
 then go to https://localhost:3000
 
 ## 📦 Dependencies
