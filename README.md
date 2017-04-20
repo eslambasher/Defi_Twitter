@@ -4,24 +4,29 @@ Defi Twitter
 
 ## 🌍 Installation
 
-1 - Install npm and nodejs/node packages
+1 - Install npm and nodejs/node packages.
+Commendes : sudo apt-get isntall npm nodejs.
 
 ## ⚙ Configuration
 
-Explain what are the steps for configuring the application
+if you want change the HashTag :
+1 - Go to the file get_twitter.js and in the function stream change the value for track. 
 
 ## 👋 Usage
 
-Explain how to use it
+Run this commande : 
+nodejs/node get_twitter.js
+then go to https://localhost:3000
 
 ## 📦 Dependencies
 
-What are the project dependencies
+socket.io : "^1.7.3" for get tweets in real time.
+twitter : "^1.7.0 for get the tweets.
 
 ## 🕳 Troubleshooting
 
-All the help you can provide to avoid falling in a trap or a black hole.
+if there is a problem when you run the code you have to change the port.
 
-## ❤️ Contribute
+you can change it in the file get_twitter.js the variable port.
 
-Explain how to contribute to the project
+if there is another problem you can send me a mail "eslamelbasher@yahoo.com"
