@@ -8,10 +8,10 @@ var  twitter = require('twitter')
 app.listen(port);
 
 var twit = new twitter({
-  consumer_key: 'Z0jz4btfOYMcnB4ududxrdT4s',
-  consumer_secret: 'LE2NSmShRInl6TjBXHsR5HzxUTxGYGW2eoNg4I5A00WDDKFlPU',
-  access_token_key: '453406916-AzyUBm8LeDNiD5BupGgdOxBaoYYzVLVO0YR86ejm',
-  access_token_secret: 'qfQkCCtlpWgvXtPgo16Dh2MOFlO4nvm077iwUt5qSojbn'
+  consumer_key: 'Write here your consumer key',
+  consumer_secret: 'Write here your consumer secret key',
+  access_token_key: 'Write here your token key',
+  access_token_secret: 'Write here your secret key'
 });
 
 function handler (req, res) {
