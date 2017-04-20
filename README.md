@@ -21,6 +21,7 @@ then go to https://localhost:3000
 ## 📦 Dependencies
 
 socket.io : "^1.7.3" for get tweets in real time.
+
 twitter : "^1.7.0 for get the tweets.
 
 ## 🕳 Troubleshooting
