@@ -24,31 +24,29 @@
   wordWrap: true,
   opacity: 1,
   wordWrapWidth: 440
-  });
-  var app = new PIXI.Application(750 , 500, {backgroundColor: 0x1099bb});
-  document.body.appendChild(app.view);
-  let point = 0;
-  var User = new PIXI.Text("User : " + point);
-  User.x = 650;
-  User.y = 10;
+  })
+  var  app = new PIXI.Application(750 , 500, {backgroundColor: 0x1099bb})
+  document.body.appendChild(app.view)
+  let  point = 0
+  var  User = new PIXI.Text( "User : " + point )
+  User.x = 650
+  User.y = 10
   app.stage.addChild(User);
-  var socket = io.connect('/'),
-      i      = 0;
-      function onclick() {
-            this.visible = false;
-            User.setText("User : " + ++point)
+  var  socket = io.connect('/')
+  var  i      = 0
+  function onclick () {
+  	this.visible = false;
+        User.setText( "User : " + ++point )
         }
-  socket.on('tweet', function (data,point) {
-  var richText = new PIXI.Text(data , style);
-  richText.x = 10;
-  richText.y = 10 + (i * 70);
-  i++;
+  socket.on('tweet', function (data, point) {
+  var  richText = new PIXI.Text(data , style)
+  richText.x = 10
+  richText.y = 10 + (i * 70)
+  i++
   richText.interactive = true
   richText.buttonMode = true
-  richText.on('pointerdown',onclick)
-  app.stage.addChild(richText);
-  });
-
-
+  richText.on('pointerdown', onclick)
+  app.stage.addChild(richText)
+  })
 </script>
 </html>

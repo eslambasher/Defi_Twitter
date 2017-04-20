@@ -1,9 +1,9 @@
-var port = 3000
-var app = require('http').createServer(handler),
-    io = require('socket.io').listen(app),
-    fs = require('fs'),
-    sys = require('sys'),
-    twitter = require('twitter');
+var  port = 3000
+var  app = require('http').createServer(handler)
+var  io = require('socket.io').listen(app)
+var  fs = require('fs')
+var  sys = require('sys')
+var  twitter = require('twitter')
 
 app.listen(port);
 
@@ -18,20 +18,20 @@ function handler (req, res) {
   fs.readFile('interface.html',
   function (err, data) {
     if (err) {
-      res.writeHead(500);
-      return res.end('Error loading interface.html');
+      res.writeHead(500)
+      return res.end('Error loading interface.html')
     }
-    res.writeHead(200);
-    res.end(data);
+    res.writeHead(200)
+    res.end(data)
   });
 }
 
-var twee = io.of('tweet');
+var twee = io.of('tweet')
 
 
-twit.stream('statuses/filter', { track: 'Paris' }, function(stream) {
+twit.stream('statuses/filter', { track: 'Paris' }, function (stream) {
   stream.on('data', function (data) {
-    io.sockets.emit('tweet', data.text);
-  });
-  console.log("You can open you browser: http://localhost:" + port)
+    io.sockets.emit('tweet', data.text)
+  })
+  console.log('You can open you browser: http://localhost:' + port)
 });
