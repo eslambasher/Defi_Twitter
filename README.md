@@ -8,7 +8,7 @@ Defi Twitter
 
 Commendes :  
 
-- sudo apt-get isntall npm nodejs.
+- sudo apt-get install npm nodejs.
 
 - npm i -S socket.io twitter
 
