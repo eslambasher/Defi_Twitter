@@ -1,4 +1,4 @@
-var  port = 3000
+const PORT = process.env.PORT || 8080;
 var  app = require('http').createServer(handler)
 var  io = require('socket.io').listen(app)
 var  fs = require('fs')
