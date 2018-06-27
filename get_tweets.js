@@ -5,7 +5,7 @@ var  fs = require('fs')
 var  sys = require('sys')
 var  twitter = require('twitter')
 
-app.listen(port);
+app.listen(PORT);
 
 var twit = new twitter({
   consumer_key: 'Write here your consumer key',
@@ -33,5 +33,5 @@ twit.stream('statuses/filter', { track: 'Paris' }, function (stream) {
   stream.on('data', function (data) {
     io.sockets.emit('tweet', data.text)
   })
-  console.log('You can open you browser: http://localhost:' + port)
+  console.log('You can open you browser: http://localhost:' + PORT)
 });
